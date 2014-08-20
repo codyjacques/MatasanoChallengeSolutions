@@ -14,6 +14,7 @@ def convertValue(value):
 	bits = binascii.unhexlify(value)
 	val = binascii.b2a_base64(bits)
 	print val
+	return val
 
 main()
 

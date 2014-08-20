@@ -1,4 +1,5 @@
 import argparse
+import binascii
 
 # parses the arguments and calls the function that does the work
 def main():
@@ -10,8 +11,9 @@ def main():
 
 # This will take a hex value and return a base64 representation
 def convertValue(value):
-	pass
-
+	bits = binascii.unhexlify(value)
+	val = binascii.b2a_base64(bits)
+	print val
 
 main()
 
